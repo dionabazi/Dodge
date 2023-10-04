@@ -1,0 +1,1378 @@
+body,
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* 
+Burger
+*/
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 5;
+}
+
+#logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: #3D0E61;
+    margin: 0px;
+    z-index: 9;
+}
+
+#main-menu ul {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+}
+
+#main-menu li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+#main-menu a {
+    color: #B9FAF8;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input {
+    display: none;
+}
+
+#hamburger-menu {
+    cursor: pointer;
+    position: fixed;
+    top: 12px;
+    display: block;
+    right: 20px;
+    width: 40px;
+    z-index: 9;
+    height: 40px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient( to bottom, #fff, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
+}
+
+#hamburger-menu #sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #000;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+    color: #222222;
+    font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+    padding-left: 0px;
+}
+
+#hamburger-menu li {
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+#hamburger-menu a {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+#hamburger-input:checked~.overlay {
+    visibility: visible;
+    opacity: 0.4;
+}
+
+
+/*
+Burger
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url(./my24-dodge-bhp-hero-02-desktop.avif);
+    background-position: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.container header {
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    padding: 15px;
+}
+
+.container header .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.container header .row .col {
+    flex-basis: 10%;
+    position: relative;
+}
+
+.container header .row .col ul li {
+    list-style: none;
+    font-size: 11px;
+    margin-left: 28px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container header .row .col ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.container header .row .col img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container .content {
+    padding: 60px 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: max-content;
+    position: relative;
+    left: 65%;
+    top: 30%;
+}
+
+.container .content .col-flex {
+    text-align: center;
+    position: relative;
+}
+
+.container .content .col-flex h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-family: 800;
+}
+
+.container .content .btn {
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.container .content .btn button {
+    width: 200px;
+    padding: 15px;
+    background-color: #b50000;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.container .content .next-btn {
+    text-align: center;
+    position: relative;
+}
+
+.container .content .next-btn button {
+    width: 150px;
+    padding: 15px;
+    background-color: #b50000;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    border: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.wrapper {
+    background-image: url(./dodge.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper .content {
+    padding: 60px 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: max-content;
+}
+
+.wrapper .content h1 {
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 800;
+}
+
+.wrapper .content .col-flex {
+    padding: 10px 0;
+}
+
+.wrapper .btn {
+    text-align: center;
+    position: relative;
+}
+
+.wrapper .row {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.wrapper .btn button {
+    width: 180px;
+    padding: 10px;
+    background-color: #b50000;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.blog {
+    background-color: #000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.blog .content {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    padding-top: 20px;
+    display: flex;
+}
+
+.blog .content h4 {
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    column-gap: 5px;
+}
+
+.blog .content span {
+    text-decoration: underline #fff;
+    color: #fff;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.blog .flex {
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.blog .flex h1 {
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.blog .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding: 50px 0;
+}
+
+.blog .row .col {
+    flex-basis: 25%;
+    position: relative;
+}
+
+.blog .row .col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.blog .row .col img:hover {
+    transform: scale(1.05);
+    transition: .5s ease-in;
+}
+
+.blog .row .name {
+    text-align: center;
+    position: relative;
+}
+
+.blog .row .name h5 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.blog .row .info {
+    text-align: center;
+    position: relative;
+}
+
+.blog .row .info h6 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 9px;
+}
+
+.blog .row .price {
+    text-align: center;
+    position: relative;
+}
+
+.blog .row .price h4 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container-2 {
+    background-image: url(./challengersport.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-2 .row {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.container-2 .row .content {
+    padding: 60px 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: max-content;
+}
+
+.container-2 .row .content .col-flex {
+    text-align: start;
+    position: relative;
+}
+
+.container-2 .row .content .col-flex h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.container-2 .row .content .info {
+    text-align: start;
+    position: relative;
+}
+
+.container-2 .row .content .info p {
+    color: #fff;
+    font-family: sans-serif;
+    padding: 2px 0;
+}
+
+.container-2 .row .content .flex-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.container-2 .row .content .flex-btn .col-btn {
+    flex-basis: 50%;
+}
+
+.container-2 .row .content .flex-btn button {
+    width: 160px;
+    padding: 7px;
+    border: none;
+    background-color: #b50000;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.container-2 .row .content .flex-btn .col-btn .play {
+    background-color: #000;
+    color: #fff;
+    padding: 7px;
+    border: 1px solid #fff;
+    outline: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.container-2 .row .content .flex-btn .col-btn .play:hover {
+    transition: .3s ease-in;
+    background-color: #242424;
+}
+
+.vlog {
+    background-image: url(./hotshirt.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.wrapper-1 {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-1 .row .col h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0 0 20px;
+}
+
+.wrapper-1 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 50px;
+}
+
+.wrapper-1 .row .col {
+    position: relative;
+}
+
+.wrapper-1 .row .col-30 {
+    flex-basis: 20%;
+}
+
+.wrapper-1 .row .col-70 {
+    flex-basis: 70%;
+}
+
+.wrapper-1 .row .col img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.wrapper-1 .row .col p {
+    color: #fff;
+    font-family: sans-serif;
+    opacity: .5;
+    font-size: 14px;
+}
+
+.wrapper-1 .col .flex-btn {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.wrapper-1 .col .flex-btn .flex-button button {
+    width: 150px;
+    padding: 15px;
+    background-color: #b50000;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.wrapper-1 .col .flex-btn .flex-button button i {
+    position: relative;
+    left: 2%;
+}
+
+.wrapper-1 .col .flex-btn .flex-button button:hover {
+    transition: .5s ease-in;
+    opacity: .9;
+}
+
+.wrapper-12 {
+    background-image: url(./dodgechallengerdrifting.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper-12 .flex {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 20px;
+    width: max-content;
+}
+
+.wrapper-12 .row {
+    display: flex;
+    text-align: end;
+    justify-content: end;
+    padding: 50px;
+}
+
+.wrapper-12 .flex .content {
+    text-align: start;
+    position: relative;
+    padding: 10px 0;
+}
+
+.wrapper-12 .flex .content h1 {
+    color: #fff;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.wrapper-12 .flex .paragraph {
+    text-align: start;
+    position: relative;
+}
+
+.wrapper-12 .flex .paragraph p {
+    color: #fff;
+    padding: 3px 0;
+    font-family: sans-serif;
+}
+
+.wrapper-12 .flex .btn {
+    text-align: start;
+    position: relative;
+    padding: 10px 0;
+}
+
+.wrapper-12 .flex .btn button i {
+    position: relative;
+    left: 3%;
+}
+
+.wrapper-12 .flex .btn button {
+    width: 150px;
+    padding: 15px;
+    background-color: #b50000;
+    cursor: pointer;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.wrapper-12 .flex .btn button:hover {
+    transition: .5s ease-in;
+    opacity: .9;
+}
+
+.container-section-number-2 {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.container-section-number-2 .row .col h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0 0 20px;
+}
+
+.container-section-number-2 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 50px;
+}
+
+.container-section-number-2 .row .col {
+    position: relative;
+}
+
+.container-section-number-2 .row .col-30 {
+    flex-basis: 20%;
+}
+
+.container-section-number-2 .row .col-70 {
+    flex-basis: 70%;
+}
+
+.container-section-number-2 .row .col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container-section-number-2 .row .col p {
+    color: #fff;
+    font-family: sans-serif;
+    opacity: .5;
+    font-size: 14px;
+}
+
+.container-section-number-2 .col .flex-btn {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.container-section-number-2 .col .flex-btn .flex-button button {
+    width: 150px;
+    padding: 15px;
+    background-color: #b50000;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.container-section-number-2 .col-images {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 50px;
+    align-items: center;
+}
+
+.container-section-number-2 .col-images .img-col {
+    flex-basis: 25%;
+}
+
+.container-section-number-2 .col-images .img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container-section-number-2 .col-images .img-col .content {
+    text-align: center;
+    position: relative;
+}
+
+.container-section-number-2 .col-images .img-col .content h4 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.container-section-number-2 .col-images .img-col .info {
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.container-section-number-2 .col-images .img-col .info p {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.container-section-number-unknown-error {
+    background-image: url(./dodgecharger.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-section-number-unknown-error .row {
+    text-align: start;
+    position: relative;
+    padding: 25px;
+}
+
+.container-section-number-unknown-error .row .flex {
+    padding: 40px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: max-content;
+}
+
+.container-section-number-unknown-error .row .flex .content {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.container-section-number-unknown-error .row .flex .content h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.container-section-number-unknown-error .row .paragraph {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.container-section-number-unknown-error .row .paragraph p {
+    color: #fff;
+    font-family: sans-serif;
+    padding: 3px 0;
+}
+
+.container-section-number-unknown-error .row .btn {
+    text-align: start;
+    position: relative;
+}
+
+.container-section-number-unknown-error .row .btn button {
+    width: 300px;
+    padding: 10px;
+    background-color: #b50000;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-family: sans-serif;
+    border: none;
+}
+
+.container-section-number-unknown-error .row .btn button i {
+    position: relative;
+    left: 5%;
+    font-size: 15px;
+}
+
+.container-section-number-known {
+    background-image: url(./aviffile.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-section-number-known .flex {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 30px;
+    width: max-content;
+}
+
+.container-section-number-known .row {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    justify-content: end;
+}
+
+.container-section-number-known .row .content {
+    text-align: start;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container-section-number-known .row .content h1 {
+    color: #fff;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.container-section-number-known .row .paragraph {
+    text-align: start;
+    position: relative;
+}
+
+.container-section-number-known .row .paragraph p {
+    color: #fff;
+    font-family: sans-serif;
+    padding: 3px 0;
+}
+
+.container-section-number-known .row .btn {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.container-section-number-known .row .btn button {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background-color: #b50000;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+.foot {
+    background-color: #212121;
+    width: 100%;
+    padding: 40px;
+}
+
+.foot .row {
+    display: flex;
+    align-items: center;
+}
+
+.foot .row .col {
+    padding: 29px;
+}
+
+.foot .row .col ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.foot .row .col ul li a {
+    text-align: none;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.foot .row .col ul li a::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 2px;
+    width: 0;
+    top: 20px;
+}
+
+.foot .row .col ul li a:hover::before {
+    transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+}
+
+.foot .row .col img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.foot .row .col button {
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    background-color: #b50000;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.foot .row .col input {
+    border-radius: 8px;
+    width: 250px;
+    position: relative;
+    padding: 10px;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+}
+
+.foot .row .col .searcbar {
+    position: absolute;
+    top: 9px;
+    z-index: 3;
+    color: #000;
+    font-size: 16px;
+    left: 5px;
+}
+
+.second-footer {
+    background-color: #000;
+    padding: 50px;
+}
+
+.second-footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.second-footer .row .col {
+    flex-basis: 20%;
+    position: relative;
+}
+
+.second-footer .row .col img {
+    width: 80px;
+    padding: 5px 0;
+    object-fit: cover;
+    display: flex;
+    cursor: pointer;
+}
+
+.second-footer .row .col ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    cursor: pointer;
+    font-size: 13px;
+    position: relative;
+    padding: 7px 0;
+}
+
+.second-footer .row .col ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-footer .row .col ul li a {
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.second-footer .row .col .content {
+    text-align: start;
+    position: relative;
+    left: 17%;
+    bottom: 10px;
+}
+
+.second-footer .row .col .content h4 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .row .col .content-4 {
+    text-align: start;
+    position: relative;
+    left: -1%;
+    bottom: 10px;
+}
+
+.second-footer .row .col .content-4 h4 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .row .col a:hover {
+    text-decoration: underline;
+}
+
+.second-footer .row .col .icons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.second-footer .row .col .icons i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.second-footer .row .col i {
+    font-size: 10px;
+    left: 1%;
+}
+
+.second-footer .row .col .icons i:hover {
+    transform: translateY(-7px);
+    transition: .5s ease-in;
+}
+
+.second-footer .row .col .img img {
+    width: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.second-footer .next-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-top: 1px solid #242424;
+}
+
+.second-footer .next-row .next-col {
+    position: relative;
+}
+
+.second-footer .next-row .next-col ul {
+    display: flex;
+}
+
+.second-footer .next-row .next-col ul li {
+    list-style: none;
+    margin-left: 40px;
+    cursor: pointer;
+    position: relative;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.second-footer .next-row .next-col ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .next-row .next-col img {
+    width: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.second-footer .next-row .next-col ul li a:hover {
+    transition: .5s ease-in;
+    text-decoration: underline;
+}
+
+.second-footer .content {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.second-footer .content h6 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .second-content {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.second-footer .second-content h6 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .third-content {
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+}
+
+.second-footer .third-content h6 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.second-footer .third-content span {
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.second-footer .third-content span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background-color: #fff;
+    top: 55px;
+    height: 1.2px;
+}
+
+.second-footer .third-content span:hover::before {
+    transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 27%;
+}
+
+.container,
+.wrapper,
+.wrapper-1,
+.wrapper-12,
+.blog,
+.container-2,
+.vlog,
+.container-section-number-2,
+.container-section-number-known,
+.container-section-number-unknown-error,
+.foot,
+.second-footer {
+    animation: allTree 3.5s ease-in;
+}
+
+.loading {
+    background-image: url(dodge-dodge-challenger-srt-dodge-challenger-dodge-challenger-srt-hellcat-hd-wallpaper-preview.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: -4;
+}
+
+.loader {
+    position: relative;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-11%, -50%);
+}
+
+.loader:before {
+    content: '';
+    animation: 3s print linear alternate infinite;
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #fff;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translatey(-45%);
+    height: 1.3em;
+    background: currentColor;
+    opacity: 0.8;
+    animation: 1s blink steps(2) infinite;
+}
+
+@keyframes allTree {
+    0%,
+    90% {
+        display: none;
+    }
+    100% {
+        display: block !important;
+    }
+}
+
+@keyframes blink {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes print {
+    0% {
+        content: "W";
+    }
+    10% {
+        content: "WE";
+    }
+    20% {
+        content: "WEL";
+    }
+    30% {
+        content: "WELC";
+    }
+    40% {
+        content: "WELCO";
+    }
+    50% {
+        content: "WELCOM";
+    }
+    60% {
+        content: "WELCOME";
+    }
+    70% {
+        content: "WELCOME T";
+    }
+    80% {
+        content: "WELCOME TO";
+    }
+    90% {
+        content: "DO";
+    }
+    100% {
+        content: "DODGE";
+    }
+}
+
+@media (max-width:650px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .burger {
+        display: block;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .container .row .col ul li {
+        display: none;
+    }
+}
+
+
+/* media width e dyta */
+
+@media (651px <=width <=897px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+
+/* media width e treta */
+
+@media (898px <=width <=1024px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+
+/* media width e katerta */
+
+@media (1025px <=width <=1241px) {
+    body,
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* media width e fundit */
+
+@media only screen and (min-width:1241px) {
+    body,
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
